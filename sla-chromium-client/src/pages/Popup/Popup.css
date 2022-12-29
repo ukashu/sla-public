@@ -1,0 +1,39 @@
+.App {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.App > div {
+  flex: 1;
+}
+
+.streamer {
+  background-color: blue;
+  color: white;
+}
+
+.watcher {
+  background-color: red;
+  color: white;
+}
+
+.home {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: bisque;
+}
