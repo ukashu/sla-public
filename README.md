@@ -1,20 +1,20 @@
 # Spotify Listen Along
-Application (Node.js server + React client(chrome extension)) allowing multiple people (watchers) to listen along to one spotify playback controlled by one person (streamer).
+Application (Node.js server + React client(chromium extension)) allowing multiple people (watchers) to listen along to one spotify playback controlled by one person (streamer).
 ## How does it work
 ![SLA diagram](./SLAdiagram.png)
-## Prerequsites:
+## Prerequisites:
 <ul>
   <li>node installed</li>
   <li>npm installed</li>
   <li>chromium browser</li>
   <li>spotify premium account</li>
-  <li>application registered in spotify for developers</li>
+  <li>application registered in "Spotify for Developers"</li>
 </ul>
 
 ## Installation:
 
 1. Run ```npm install``` in the main directory. This will install node modules for the server. To start the server - run ```node index.js```.
-2. Follow the instructions in the ```./sla-chromium-client/README.md```. Omit point 2 of the README. This will give you the client side extension to load into your browser.
+2. Follow the instructions in the ```./sla-chromium-client/README.md```. Omit point 2 of these instructions. This will give you the client side extension to load into your browser.
 
 ## Usage:
 Register an application in ```developer.spotify.com```. You have to allow users access to your app in development mode (under 'users and access') and set redirect URI in settings (```https://[your chrome extension identifier].chromiumapp.org/```).
