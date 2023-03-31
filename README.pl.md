@@ -1,3 +1,4 @@
+[![eng](https://img.shields.io/badge/lang-eng-blue.svg)](https://github.com/ukashu/sla-public/blob/main/README.md)
 # Spotify Listen Along
 Aplikacja (serwer Node.js + Klient React(rozszerzenie chromium)) dająca możliwość słuchania spotify w grupie przez internet.
 ## Schemat działania

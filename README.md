@@ -1,3 +1,4 @@
+[![pl](https://img.shields.io/badge/lang-pl-blue.svg)](https://github.com/ukashu/sla-public/blob/main/README.pl.md)
 # Spotify Listen Along
 Application (Node.js server + React client(chromium extension)) allowing multiple people (watchers) to listen along to one spotify playback controlled by one person (streamer).
 ## How does it work
