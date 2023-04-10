@@ -19,5 +19,4 @@ Application (Node.js server + React client(chromium extension)) allowing multipl
 
 ## Usage:
 Register an application in ```developer.spotify.com```. You have to allow users access to your app in development mode (under 'users and access') and set redirect URI in settings (```https://[your chrome extension identifier].chromiumapp.org/```).
-Once you set up your spotify application you can paste your apps Client ID into ```./sla-chromium-client/src/pages/Background/modules/spotifyWatcher.js``` into the CLIENT_ID variable.
-In the browser, open the extension popup and click on either the streamer or the watcher side. If you're a watcher - for the socket connection to work, you've got to have a twitch.tv tab open.
+Once you set up your spotify application you can paste your apps Client ID into ```./sla-chromium-client/src/pages/Background/modules/spotifyWatcher.js``` into the CLIENT_ID variable. Start the server with the command ```node index```. In the browser, open the extension popup and click on either the streamer or the watcher side. If you're a watcher - for the socket connection to work, you've got to have a tab with twitch.tv open. To test the watcher side use the curl commands in the ```index.js``` files comments.

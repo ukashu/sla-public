@@ -31,7 +31,7 @@ app.post('/send-emit', (req, res) => {
 
 //TODO endpoint for those joining to get the current track and play it TODO
 //Example resume request
-//curl -X POST -H "Content-Type: application/json" -d '{"trackURI": "spotify:track:5v6oNYF0lVT4IUl3ZIJrVZ", "trackProgress": "8000", "action": "resume"}' http://localhost:5000/send-emit
+//curl -X POST -H "Content-Type: application/json" -d '{"trackURI": "spotify:track:2Jb5Qyy37fdGOTJ6iPYq1y", "trackProgress": "134000", "action": "resume"}' http://localhost:5000/send-emit
 //Example pause request
 //curl -X POST -H "Content-Type: application/json" -d '{"action": "pause"}' http://localhost:5000/send-emit
 
