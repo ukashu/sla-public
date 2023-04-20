@@ -1,7 +1,5 @@
 import { io } from "socket.io-client";
 
-console.log('Content script works!');
-
 async function readLocalStorage(key) {
     return new Promise((resolve, reject)=>{
         chrome.storage.sync.get([key], (result)=>{resolve(result[key])})
@@ -10,7 +8,7 @@ async function readLocalStorage(key) {
 
 let watcherOrStreamer, socket
 
-//TODO I think that when I refresh, the first connection doesnt deactivate and it doubles messages sent TODO//
+//TODO I think that when I refresh, the first connection doesnt deactivate and it doubles messages sent
 
 async function executeWatcherLogic() {
     watcherOrStreamer = await readLocalStorage('watcherOrStreamer')

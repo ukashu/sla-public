@@ -184,18 +184,18 @@ function getTrackCheckAndFetch() {
     if (last_saved_track != res.item.uri && isPaused === false) {
       //Send track data to server
       console.log('the last track is different and is resumed!')
-      postSendEmit(res.item.uri, res.progress_ms, 'resume')
+      putSessionChange(res.item.uri, res.progress_ms, 'resume')
       .then((res)=>{console.log(res)})
     } else if (last_saved_progress === res.progress_ms && isPaused === false) { // && isPaused === false
       //Send signal to pause to server
-      postSendEmit(res.item.uri, res.progress_ms, 'pause')
+      putSessionChange(res.item.uri, res.progress_ms, 'pause')
       .then((res)=>{console.log(res)})
       isPaused = true
       console.log('you should pause!')
     } else if (last_saved_progress != res.progress_ms && isPaused === true) {
       console.log('You should resume!')
       //send signal to resume(set track) to server/change 
-      postSendEmit(res.item.uri, res.progress_ms, 'resume')
+      putSessionChange(res.item.uri, res.progress_ms, 'resume')
       .then((res)=>{console.log(res)})
       isPaused = false
     }
@@ -209,10 +209,10 @@ function getTrackCheckAndFetch() {
   })
 }
 
-function postSendEmit(trackURI, trackProgress, action) {
+function putSessionChange(trackURI, trackProgress, action) {
   let data = { trackURI, trackProgress, action }
-  return fetch('http://localhost:5000/send-emit', { //If there's no return fetch gets called regardless of the checks in getTrackCheckAndFetch
-    method: 'post',
+  return fetch('http://localhost:5000/session', { //If there's no return fetch gets called regardless of the checks in getTrackCheckAndFetch
+    method: 'put',
     body: JSON.stringify(data),
     headers: { 'Content-type': 'application/json' }
   })
