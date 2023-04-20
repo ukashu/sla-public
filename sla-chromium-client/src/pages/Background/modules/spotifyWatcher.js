@@ -211,7 +211,7 @@ function getTrackCheckAndFetch() {
 
 function putSessionChange(trackURI, trackProgress, action) {
   let data = { trackURI, trackProgress, action }
-  return fetch('http://localhost:5000/session', { //If there's no return fetch gets called regardless of the checks in getTrackCheckAndFetch
+  return fetch('http://localhost:5000/api/session', { //If there's no return fetch gets called regardless of the checks in getTrackCheckAndFetch
     method: 'put',
     body: JSON.stringify(data),
     headers: { 'Content-type': 'application/json' }
